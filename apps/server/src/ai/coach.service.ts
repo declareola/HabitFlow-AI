@@ -6,10 +6,10 @@ export class CoachService {
   private ai: GoogleGenAI;
 
   constructor() {
-    // Shared Gemini client utility initialized on the server-side safely.
+        // Shared Gemini client utility initialized on the server-side safely.
     // Set 'User-Agent' to 'aistudio-build' for telemetry compliance.
     this.ai = new GoogleGenAI({
-      apiKey: process.env.GEMINI_API_KEY || "MOCK_KEY_FOR_REPRESENTATION",
+      apiKey: process.env.GEMINI_API_KEY || "",
       httpOptions: {
         headers: {
           "User-Agent": "aistudio-build",
